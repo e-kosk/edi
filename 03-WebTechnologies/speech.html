@@ -9,6 +9,8 @@
 		<button onclick="createSpeech();">Create a speech</button>
 		<p id="speech"></p>
 
+		<div id='text'></div>
+
 		<script>
 			function createSpeech() {
 				//each array consists of 10 elements
@@ -37,14 +39,22 @@
 								'odpowiednich warunków aktywizacji.', 'modelu rozwoju.', 'form oddziaływania.'
 							];
 				
-				// complete a JavaScript code here ...
-				// ...
+				var speach = Array()
+
+				var fstf = Array(first, second, third, fourth);
+
 				
+				for(i=0; i<fstf.length; i++){
+					speach.push(fstf[i][n()])
+				}
+				
+
+				document.getElementById('text').innerText = speach.join(" ")
 			}
 
 			// returns random integer from 0 to 9
 			function n() {
-				// ...
+				return Math.round(Math.random() * 9)
 			}
 			
 		</script>
