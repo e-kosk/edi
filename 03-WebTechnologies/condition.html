@@ -9,13 +9,18 @@
 		<p>Display data one the console</p>
 
 		<script>
-			// enter your name, surname
-			// ...
+			var name = 'Adam';
+			var surname = 'Kowalski';
+			var age = 26;
+
+			var decyzja = confirm('chcesz dane?')
 			
-			// display your personal data on the console
-			// ...
-			
-			// 
+			if (decyzja){
+				console.log(name, surname, age)
+			}else{
+				console.log('nie chciałeś')
+			}
+
 		</script>
 	</body>
 </html>
