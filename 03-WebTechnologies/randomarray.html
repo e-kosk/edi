@@ -7,23 +7,23 @@
 	<body>
 		<h1>An array</h1>
 		<script>
-			var myArray = []
+			var myArray = [];
 
-			for(i=1; i<6; i++){
+			for (let i = 1; i < 6; i++) {
 				myArray.push(Math.round(Math.random() * 5))
 			}
 
-			var ordered = true
+			var ordered = true;
 
-			for(i=0; i<myArray.length - 1; i++){
-				if (myArray[i] > myArray[i+1]){
-					ordered = false
+			for (let i = 0; i < myArray.length - 1; i++) {
+				if (myArray[i] > myArray[i + 1]) {
+					ordered = false;
 					break;
 				}
 			}
 
-			console.log(myArray)
-			console.log(ordered)
+			console.log(myArray);
+			console.log(ordered);
 
 
 		</script>

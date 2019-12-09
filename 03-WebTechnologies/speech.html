@@ -38,18 +38,18 @@
 								'nowych propozycji.', 'kierunków postępowego wychowania.', 'systemu szkolenia kadr odpowiadającego potrzebom.',
 								'odpowiednich warunków aktywizacji.', 'modelu rozwoju.', 'form oddziaływania.'
 							];
-				
-				var speach = Array()
 
-				var fstf = Array(first, second, third, fourth);
+				var speech = Array();
 
-				
-				for(i=0; i<fstf.length; i++){
-					speach.push(fstf[i][n()])
+				var sentences = Array(first, second, third, fourth);
+
+
+				for (let i = 0; i < sentences.length; i++) {
+					speech.push(sentences[i][n()])
 				}
-				
 
-				document.getElementById('text').innerText = speach.join(" ")
+
+				document.getElementById('text').innerText = speech.join(" ")
 			}
 
 			// returns random integer from 0 to 9

@@ -10,15 +10,29 @@
 			var myArray = {
 					arr: [3,4,76,1,5,787,33,76,1,99,45,235,53,23],
 					min: function(){
-						// maximum value (sort the arr and take the last value, use a built-in function)
+						this.arr.sort(function(a, b){return a - b});
+						return this.arr[0]
 					},		
-					max: function(){},		// look at the min method comment
-					avg: function(){},		// avarage value
-					lth: function(val){}	// the number of arr values less than 'val'
+					max: function(){
+						this.arr.sort(function(a, b){return a - b});
+						return this.arr[this.arr.length - 1]
+					},
+					avg: function(){
+						return this.arr.reduce((a, b) => a + b) / this.arr.length
+					},
+					lth: function(val){
+						return this.arr.filter(function (e) {
+							return e < val
+						})
+					}
 			};
-			
-			// display results (min,max,avg,lth) in the console
-			// ...
+
+
+			console.log(myArray.min());
+			console.log(myArray.max());
+			console.log(myArray.avg());
+			console.log(myArray.lth(20));
+
 		</script>
 	</body>
 </html>

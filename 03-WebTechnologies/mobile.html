@@ -6,7 +6,36 @@
 	</head>
 	<body>
 		<h1>Create mobile phone</h1>
+		<button id="button">Button</button>
 		<script>
+			let phone = {
+				"brand": "Pear",
+				"numberOfSpeakers": 2,
+				"camera": true,
+				"buttons": ["volume up", "volume down", "power"],
+				"owner": {
+					"name": "Eryk",
+					"city": "Kraków"
+				}
+			};
+
+			let button = document.getElementById('button');
+
+			button.addEventListener('click', function () {
+				alert(
+						'brand: ' + phone.brand
+						+ '\n'
+						+ 'number of speakers: ' + phone.numberOfSpeakers
+						+ '\n'
+						+ 'camera: ' + phone.camera
+						+ '\n'
+						+ 'buttons: ' + phone.buttons.join(', ')
+						+ '\n'
+						+ 'owner name: ' + phone.owner.name
+						+ '\n'
+						+ 'owner city: ' + phone.owner.city
+				)
+			})
 		</script>
 	</body>
 </html>

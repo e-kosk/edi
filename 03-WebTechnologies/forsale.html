@@ -7,6 +7,52 @@
 	<body>
 		<h1>Houses for sale</h1>
 		<script>
+
+			function House(bedrooms, facilities, price, address, phone) {
+				this.bedrooms = bedrooms;
+				this.facilities = facilities;
+				this.price = price;
+				this.address = address;
+				this.phone = phone;
+				this.changePrice = function (newPrice) {
+					this.price = newPrice;
+				};
+				this.addFacility = function (newFacility) {
+					this.facilities.push(newFacility);
+				};
+				this.description = function () {
+					return 'bedrooms: ' + this.bedrooms + '\n'
+							+ 'facilities: ' + this.facilities.join(', ') + '\n'
+							+ 'price: ' + this.price + '\n'
+						+ 'address: street: ' + this.address.street + '\n'
+						+ 'address: city: ' + this.address.city + '\n'
+						+ 'phone: ' + this.phone
+				}
+			}
+
+			houses = [
+					new House(3, ['garden', 'garage'], 1400000, {'street': 'Long', 'city': 'London'}, '123 321 123'),
+					new House(7, ['swimming pool', 'garage'], 1650000, {'street': 'Short', 'city': 'Cracow'}, '111 222 333'),
+					new House(1, ['garden', 'sauna'], 700000, {'street': 'Nice', 'city': 'Wroclaw'}, '000 000 000'),
+					new House(2, ['garage', 'airport'], 2130000, {'street': 'Main Street', 'city': 'New York'}, '444 222 000'),
+					new House(3, ['garden', 'secret room'], 320000, {'street': 'St. Andrzej', 'city': 'Oslo'}, '456 642 121')
+			];
+
+			for (let i = 0; i < houses.length; i++){
+				console.log(houses[i].description())
+			}
+
+			houses[0].price = 150000;
+			houses[4].price = 300000;
+
+			houses[1].addFacility('lake');
+			houses[2].addFacility('golf course');
+			houses[3].addFacility('hidded castle')
+
+			for (let i = 0; i < houses.length; i++){
+				console.log(houses[i].description())
+			}
+
 		</script>
 	</body>
 </html>
