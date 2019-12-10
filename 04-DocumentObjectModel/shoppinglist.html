@@ -4,6 +4,10 @@
 <head>
     <title>Shopping List</title>
     <meta charset="UTF-8">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -20,7 +24,24 @@
     </ol>
 
     <script>
-    	// a JavaScript code here ...
+
+        let h = function (el) {
+            $(el).on('dblclick', function () {
+                $(el).remove();
+            })
+        };
+
+        $('li').each(function (){
+            h(this);
+        });
+
+        document.getElementsByTagName('button')[0].addEventListener('click', function () {
+            let text = document.getElementsByName('item')[0].value;
+            let li = document.createElement('li');
+            li.innerText = text;
+            h(li);
+            document.getElementsByTagName('ol')[0].appendChild(li);
+        });
 
     </script>
 </body>

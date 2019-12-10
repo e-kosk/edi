@@ -6,7 +6,23 @@
 	</head>
 	<body>
 		<script>
-			// a JavaScript code here ...
+
+			let table = document.createElement('table');
+			var k = 1;
+
+			for(let i = 1; i < 3; i++) {
+				let tr = document.createElement('tr');
+				for (let j = 1; j < 3; j++) {
+					let td = document.createElement('td');
+					td.innerText = k;
+					tr.appendChild(td);
+					k++;
+				}
+				table.appendChild(tr);
+			}
+
+			table.setAttribute('border', '1');
+			document.getElementsByTagName('body')[0].appendChild(table);
 			
 		</script>
 	</body>

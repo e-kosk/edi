@@ -23,7 +23,20 @@
 		<textarea rows="15" cols="50"></textarea><br>
 		
 		<script>
-			// a JavaScript code here ...
+			document.getElementsByTagName('textarea')[0].addEventListener('input', function () {
+				if (this.value.length === 1){
+					let that = this;
+					setTimeout(function () {
+						let text = that.value;
+						let chars = text.length;
+						let words = text.split(' ').length;
+
+						let p = document.createElement('p');
+						p.innerText = 'words: ' + words + ' chars: ' + chars;
+						that.parentElement.appendChild(p);
+					}, 30000)
+				}
+			})
 			
 		</script>
 		

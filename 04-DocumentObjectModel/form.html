@@ -19,6 +19,13 @@
 		var university = "Cracow University of Economics";
 		var address = "Rakowicka 27, Krakow, POLAND";
 
+
+		document.getElementsByTagName('button')[0].addEventListener('click', function () {
+			let i = document.getElementsByTagName('input');
+			i[0].value = university;
+			i[1].value = address;
+		})
+
 	</script>
 </body>
 
